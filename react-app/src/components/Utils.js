@@ -13,8 +13,22 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+import {Constants} from '@adobe/cq-react-editable-components';
 
-import './Page';
-import './Text';
-import './HelloWorld/HelloWorld';
-import './Image/Image';
+/**
+ * Extract an id from the cqModel field of given properties
+ *
+ * @param props     - React.Component props object
+ * @returns {string|undefined}
+ */
+export function extractModelId (path) {
+    return path.substr(path.lastIndexOf('/') + 1);
+}
+
+export function isBrowser() {
+    try {
+        return typeof window !== 'undefined';
+    }catch(e){ 
+        return false;
+    }
+}

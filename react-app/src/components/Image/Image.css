@@ -13,8 +13,19 @@
  ~ See the License for the specific language governing permissions and
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+img {
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
 
-import './Page';
-import './Text';
-import './HelloWorld/HelloWorld';
-import './Image/Image';
+.cmp-image {
+    padding: 0 12px !important;
+}
+
+.cmp-image img {
+    width: 100%;
+}
